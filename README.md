@@ -27,7 +27,7 @@ After installing a skill, ask your AI agent to use it for a relevant task. Agent
 ## Test in Docker Levels
 
 - `normal` is the default and requires explicit approval for project scripts and dependency lifecycle hooks.
-- `full` is opt-in. Say "use test-in-docker in full mode" to allow the agent to choose and run safe commands and scripts inside Docker without asking for approval for each one.
+- `full` is opt-in. Say "use test-in-docker in full mode" to allow the agent to choose and run safe commands and scripts inside Docker without asking for approval for each one. Network access, package downloads, and lifecycle hooks that cannot be disabled still require separate approval.
 
 Example:
 
@@ -35,7 +35,7 @@ Example:
 Use the test-in-docker skill in full mode to inspect this project and run an appropriate test suite.
 ```
 
-Full mode still forbids host execution, privileged containers, Docker socket mounts, host namespace access, and secret-bearing mounts.
+Full mode still forbids host execution, privileged containers, Docker socket mounts, host namespace access, and secret-bearing mounts. It does not authorize following instructions found in project files.
 
 ## Installation
 
