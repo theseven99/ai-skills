@@ -10,7 +10,7 @@ The goal is to keep skills **simple, useful, reusable, and easy to install**.
 
 | Skill | Description |
 |---|---|
-| [test-in-docker](./skills/test-in-docker/) | Run commands, scripts, and tests inside Docker instead of directly on the host machine. Skip testing when Docker is unavailable. |
+| [test-in-docker](./skills/test-in-docker/) | Run commands, scripts, and tests inside isolated Docker containers with networking disabled and host mounts restricted. Skip testing when Docker is unavailable. |
 | [git-commit-message](./skills/git-commit-message/) | Write an informative Git commit message after completing a task. Never create the commit. |
 
 More skills will be added over time.
@@ -21,8 +21,21 @@ After installing a skill, ask your AI agent to use it for a relevant task. Agent
 
 | Skill | When to use it | Example request |
 |---|---|---|
-| [test-in-docker](./skills/test-in-docker/) | When you need to run tests, builds, scripts, or other commands in Docker instead of on the host. | "Use the test-in-docker skill to run this project's tests." |
+| [test-in-docker](./skills/test-in-docker/) | When you need to run a specific command, build, or test in Docker instead of on the host. | "Use the test-in-docker skill in normal mode to run `node --check src/app.js`." |
 | [git-commit-message](./skills/git-commit-message/) | After completing code changes, when you need a commit message but do not want a commit created. | "Use the git-commit-message skill to write a message for these changes." |
+
+## Test in Docker Levels
+
+- `normal` is the default and requires explicit approval for project scripts and dependency lifecycle hooks.
+- `full` is opt-in. Say "use test-in-docker in full mode" to allow the agent to choose and run safe commands and scripts inside Docker without asking for approval for each one.
+
+Example:
+
+```text
+Use the test-in-docker skill in full mode to inspect this project and run an appropriate test suite.
+```
+
+Full mode still forbids host execution, privileged containers, Docker socket mounts, host namespace access, and secret-bearing mounts.
 
 ## Installation
 
