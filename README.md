@@ -1,6 +1,6 @@
 # AI Skills
 
-A collection of practical, reusable skills for AI coding agents.
+A collection of practical, reusable AI agent skills for coding, development workflows, automation, and everyday tasks. Designed to be simple, focused, and easy to install.
 
 This repository contains small, focused skills designed to help AI agents perform specific tasks more effectively. Each skill provides clear instructions and examples that agents can follow in real-world workflows.
 
