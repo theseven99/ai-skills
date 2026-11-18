@@ -15,6 +15,15 @@ The goal is to keep skills **simple, useful, reusable, and easy to install**.
 
 More skills will be added over time.
 
+## Using Skills
+
+After installing a skill, ask your AI agent to use it for a relevant task. Agents that support skills may also select an installed skill automatically when its purpose matches your request.
+
+| Skill | When to use it | Example request |
+|---|---|---|
+| [test-in-docker](./skills/test-in-docker/) | When you need to run tests, builds, scripts, or other commands in Docker instead of on the host. | "Use the test-in-docker skill to run this project's tests." |
+| [git-commit-message](./skills/git-commit-message/) | After completing code changes, when you need a commit message but do not want a commit created. | "Use the git-commit-message skill to write a message for these changes." |
+
 ## Installation
 
 ### Skills CLI (recommended)

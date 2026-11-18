@@ -1,0 +1,1 @@
+When adding any skill under `./skills/`, update `README.md` with instructions or examples showing how to use that skill.
