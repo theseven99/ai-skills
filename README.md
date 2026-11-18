@@ -11,6 +11,7 @@ The goal is to keep skills **simple, useful, reusable, and easy to install**.
 | Skill | Description |
 |---|---|
 | [test-in-docker](./skills/test-in-docker/) | Run commands, scripts, and tests inside Docker instead of directly on the host machine. Skip testing when Docker is unavailable. |
+| [git-commit-message](./skills/git-commit-message/) | Write an informative Git commit message after completing a task. Never create the commit. |
 
 More skills will be added over time.
 
@@ -20,6 +21,10 @@ Install a specific skill using the [Skills CLI](https://github.com/vercel-labs/s
 
 ```bash
 npx skills add theseven99/ai-skills --skill test-in-docker
+```
+
+```bash
+npx skills add theseven99/ai-skills --skill git-commit-message
 ```
 
 To install all available skills:
@@ -36,6 +41,8 @@ Follow the CLI instructions to select your target agent and installation options
 ai-skills/
 └── skills/
     ├── test-in-docker/
+    │   └── SKILL.md
+    ├── git-commit-message/
     │   └── SKILL.md
     └── your-next-skill/
         └── SKILL.md
