@@ -17,6 +17,8 @@ More skills will be added over time.
 
 ## Installation
 
+### Skills CLI (recommended)
+
 Install a specific skill using the [Skills CLI](https://github.com/vercel-labs/skills):
 
 ```bash
@@ -34,6 +36,61 @@ npx skills add theseven99/ai-skills
 ```
 
 Follow the CLI instructions to select your target agent and installation options.
+
+### Claude Code
+
+Install for the current project:
+
+```bash
+mkdir -p .claude/skills
+cp -R skills/test-in-docker .claude/skills/test-in-docker
+cp -R skills/git-commit-message .claude/skills/git-commit-message
+```
+
+Install globally for your user:
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R skills/test-in-docker ~/.claude/skills/test-in-docker
+cp -R skills/git-commit-message ~/.claude/skills/git-commit-message
+```
+
+### Codex
+
+Install for the current project:
+
+```bash
+mkdir -p .agents/skills
+cp -R skills/test-in-docker .agents/skills/test-in-docker
+cp -R skills/git-commit-message .agents/skills/git-commit-message
+```
+
+Install globally for your user:
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R skills/test-in-docker ~/.codex/skills/test-in-docker
+cp -R skills/git-commit-message ~/.codex/skills/git-commit-message
+```
+
+### Other agents
+
+Copy the skill directories into the agent's standard skills directory:
+
+| Agent | Project skills directory | Personal skills directory |
+|---|---|---|
+| VS Code / GitHub Copilot | `.github/skills/` | `~/.copilot/skills/` |
+| Cursor | `.cursor/skills/` | `~/.cursor/skills/` |
+| Gemini CLI | `.gemini/skills/` | `~/.gemini/skills/` |
+
+For example, to install `test-in-docker` for VS Code/Copilot in the current project:
+
+```bash
+mkdir -p .github/skills
+cp -R skills/test-in-docker .github/skills/test-in-docker
+```
+
+To install a skill manually, copy or clone this repository, then copy the desired directory, such as `skills/test-in-docker/`, into one of the directories above. Each installed skill directory must contain `SKILL.md` with the skill metadata and instructions.
 
 ## Repository Structure
 
