@@ -51,6 +51,7 @@ In full mode:
 19. Check the actual exit code and output.
 20. Clean up temporary resources created during testing.
 21. Report whether the test passed, failed, or was skipped.
+22. If testing requires viewing multiple images, combine them into a single grid image before viewing to save tokens.
 
 ## Examples
 
